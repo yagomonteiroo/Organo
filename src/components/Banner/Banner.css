@@ -1,0 +1,11 @@
+.banner{
+  background-color: #6278F7;
+  display: flex;
+  justify-content: center;
+
+}
+
+.banner img{
+  width: 100%;
+  max-width: 1440px;
+}

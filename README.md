@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+<h1 align="center">💻 Projeto Organo 💻</h1> 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projeto de estudo desenvolvido durante o curso React: desenvolvendo com JavaScript da formação Oracle ONE em parceria com a Alura!. Durante a realização do projeto foram disponibilizados um protótipo no figma e um modelo kanban no trello para utilizar como ferramenta de gerenciamento do desenvolvimento do projeto.
 
-## Available Scripts
+**Link para vizualizar o  projeto:**
+[https:/](https:/)          
+                    
+## ⚙️Pré-requisitos
 
-In the project directory, you can run:
+Antes de começar, você vai precisar instalar em sua máquina as seguintes ferramentas:
+- [Git](https://git-scm.com)
+- [Node LTS version](https://nodejs.org/en)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Também é bom ter um editor de texto ou IDE para trabalhar, eu recomendo o VSCode:
+ - [Visual Studio Code](https://code.visualstudio.com/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠 Tecnologias
 
-### `npm run build`
+As seguintes tecnologias foram utilizadas na construção do projeto:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![React.js](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![CSS3](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Principais conceitos e ferramentas:
+- [Create React App](https://create-react-app.dev/)
+- [JSX](https://pt-br.legacy.reactjs.org/docs/introducing-jsx.html)
+- [Props](https://legacy.reactjs.org/docs/components-and-props.html)
+- [React Hooks](https://pt-br.legacy.reactjs.org/docs/hooks-overview.html)
+- [useState](https://react.dev/reference/react/useState)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Baixar uma copia dos arquivos:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-   Instale o Git em sua máquina junto ao GitBash através do link abaixo:
+    -   [https://git-scm.com/downloads](https://git-scm.com/downloads)
+    
+-   Efetue um clone deste repositório através dos seguintes passos:
+    -   Vá até a sua pasta ou local desejável para efetuar o download do repositório e clique com o botão esquerdo do mouse. Selecione o terminal de sua preferência (Recomendado: Git Bash) e executar o código abaixo:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+	    - ```gitbash
+	    	git clone https://  
+## Autor
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Desenvolvido por : Yago Monteiro**<br>
+**GitHub**: https://github.com/yagomonteiroo<br>
+**Linkedin**: https://www.linkedin.com/in/yagomonteiro/
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MIT License
+Copyright (c) 2023 Yago Monteiro

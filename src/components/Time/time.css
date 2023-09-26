@@ -1,0 +1,28 @@
+.time {
+  text-align: center;
+  padding: 1.5rem 5rem;
+  width: 100%;
+  min-height: 438px;
+}
+
+.time h3 {
+  color: #212121;
+  font-family: Prata;
+  font-size: 32px;
+  padding-bottom: 9.94px;
+}
+
+.time span{
+  display: inline-block;
+  text-align: center;
+  margin-bottom:38.06px;
+  width: 32px;
+  height: 4px;
+}
+
+.time div.container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
