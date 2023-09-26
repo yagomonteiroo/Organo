@@ -3,7 +3,7 @@
 Projeto de estudo desenvolvido durante o curso React: desenvolvendo com JavaScript da formação Oracle ONE em parceria com a Alura!. Durante a realização do projeto foram disponibilizados um protótipo no figma e um modelo kanban no trello para utilizar como ferramenta de gerenciamento do desenvolvimento do projeto.
 
 **Link para vizualizar o  projeto:**
-[https:/](https:/)          
+[https://organo-yagomonteiroo.vercel.app/](https://organo-yagomonteiroo.vercel.app/)          
                     
 ## ⚙️Pré-requisitos
 
@@ -44,7 +44,21 @@ Principais conceitos e ferramentas:
     -   Vá até a sua pasta ou local desejável para efetuar o download do repositório e clique com o botão esquerdo do mouse. Selecione o terminal de sua preferência (Recomendado: Git Bash) e executar o código abaixo:
 
 	    - ```gitbash
-	    	git clone https://  
+          git clone https://github.com/yagomonteiroo/Organo.git
+          ```
+## Executar o projeto localmente
+- Tenha o [Node](https://nodejs.org/en) versão LTS instalado em sua máquina.
+- Abra o projeto no seu terminal de preferência e execute o seguinte comando para instalar as dependências do projeto:
+
+  ``` gitbash
+  npm install
+    ``` 
+- Para rodar o rodar o projeto em seu navegador execute o seguinte comando:
+
+  ``` gitbash
+  npm start
+    ``` 
+
 ## Autor
 
 **Desenvolvido por : Yago Monteiro**<br>
