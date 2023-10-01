@@ -49,7 +49,7 @@ function App() {
   const inicial = [{
     id: uuidv4(),
     nome:'Yago Monteiro',
-    cargo: 'Estudandte de Desenvolvimento Web',
+    cargo: 'Estudante de Desenvolvimento Web',
     imagem: 'https://github.com/yagomonteiroo.png',
     time: 'Front-End',
   }]
