@@ -3,6 +3,7 @@ import Botao from "../Botao";
 import CampoTexto from "../CampoTexto";
 import ListaSuspensa from "../ListaSuspensa";
 import "./formulario.css";
+import { flushSync } from "react-dom";
 
 const Formulario = (props) => {
 
@@ -15,22 +16,35 @@ const Formulario = (props) => {
   const aoSalvar = (e) => {
     e.preventDefault();
 
-    props.aoColaboradorCadastrado({
-      nome,
-      cargo,
-      imagem,
-      time,
+    //Renderiza o componente imediatamente para que se tone possível acessa-lo no dom
+    flushSync(() => {
+      
+      props.aoColaboradorCadastrado({
+        nome,
+        cargo,
+        imagem,
+        time,
+      })
+  
+      setNome("");
+      setCargo("");
+      setImagem("");
+      setTime("");
     })
 
-    setNome("");
-    setCargo("");
-    setImagem("");
-    setTime("");
-  
+    //acesso ao dom requisitando o id do time
+    const novoTimeCriado = document.getElementById(time);
+    //scroll
+    if (novoTimeCriado) {
+      novoTimeCriado.scrollIntoView({ behavior: 'smooth' });
+    }
+
+
+
   };
 
   return (
-    <section className="formulario">
+    <section className="formulario container">
       <form onSubmit={aoSalvar}>
         <h2>{props.titulo}</h2>
         <CampoTexto

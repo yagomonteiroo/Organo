@@ -1,8 +1,7 @@
 import "./cardColaborador.css";
+import { AiFillCloseCircle } from 'react-icons/ai';
 
-import React from "react";
-
-const Card = ({background,imagem, nome, cargo}) => {
+const Card = ({background,imagem, nome, cargo, aoDeletar}) => {
   return (
     <div className="card">
       <div className="fundo" style={{backgroundColor: background}}></div>
@@ -17,6 +16,11 @@ const Card = ({background,imagem, nome, cargo}) => {
 
       <h4>{nome}</h4>
       <p>{cargo}</p>
+      <AiFillCloseCircle 
+        className="btn-close" 
+        size={21}
+        style={{backgroundColor: background}}
+        onClick={()=>aoDeletar(nome)}/>
     </div>
   );
 };

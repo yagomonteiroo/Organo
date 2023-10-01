@@ -2,10 +2,13 @@ import { useState } from 'react';
 import Banner from './components/Banner';
 import Formulario from './components/Fomulario';
 import Time from './components/Time';
+import Rodape from './components/Rodape';
+import { v4 as uuidv4 } from 'uuid';
+
 
 function App() {
 
-  const times = [
+  const [times, setTimes] = useState([
     {
       nome: "Programação",
       corPrimaria:"#57C278",
@@ -41,24 +44,47 @@ function App() {
       corPrimaria:"#FF8A29",
       corSecundaria:"#FFEEDF",
     },
-  ]
+  ]);
 
-  const [colaboradores, setColaboradores]= useState([]);
+  const inicial = [{
+    id: uuidv4(),
+    nome:'Yago Monteiro',
+    cargo: 'Estudandte de Desenvolvimento Web',
+    imagem: 'https://github.com/yagomonteiroo.png',
+    time: 'Front-End',
+  }]
 
-  const aoColaboradorAdicionado = (colaborador) =>{
-    console.log(colaborador)
+  const [colaboradores, setColaboradores]= useState(inicial);
+
+  const acicionarColaborador = (colaborador) =>{
     setColaboradores( [...colaboradores, colaborador]);
   }
 
+  const removerColaborador = (nome) =>{
+    console.log(`clicou em ${nome}`)
+    setColaboradores( colaboradores.filter(colaborador => colaborador.nome !== nome));
+  }
+
+  const mudarCorDoTime = (cor, nome) =>{
+    setTimes(times.map(time => {
+      if(time.nome === nome){
+        time.corPrimaria = cor;
+        time.corSecundaria = cor+11;
+      }
+      return time
+    }))
+  }
   return (
     <div className="App">
       <Banner />
       <Formulario 
         titulo= 'Preencha os dados para criar o card do colaborador.' 
         times= {times.map(time => time.nome)}
-        aoColaboradorCadastrado={aoColaboradorAdicionado}
+        aoColaboradorCadastrado={acicionarColaborador}
       />
 
+      <section className="times">
+        <h1>Minha Organização</h1>
       {
         times.map (time => 
           <Time
@@ -67,11 +93,14 @@ function App() {
             corPrimaria = {time.corPrimaria} 
             corSecundaria  = {time.corSecundaria}
             colaboradores = {colaboradores.filter(colaborador => colaborador.time === time.nome)}
+            aoDeletar = {removerColaborador}
+            aoMudarCor = {mudarCorDoTime}
           />
         )
       }
-      
-      
+      </section>
+
+      <Rodape/>
     </div>
   );
 }

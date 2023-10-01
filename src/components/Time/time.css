@@ -1,8 +1,25 @@
 .time {
   text-align: center;
-  padding: 1.5rem 5rem;
+  padding: 1.5rem 8rem 6rem 8rem;
   width: 100%;
   min-height: 438px;
+  /* background: url("../../../public/img/fundo.png"), lightgray 50% / cover no-repeat; */
+  background-image: url("../../../public/img/fundo.png");
+  background-size: auto;
+  position: relative;
+}
+
+.input-cor{
+  position:absolute;
+  top:2vw;
+  right: 4vw;
+  border-radius:5px;
+  border: 1px solid #bbbbbb;
+  padding: 0 2px;
+  cursor: pointer;
+  background-color: white;
+  width: 60px;
+  height: 30px;
 }
 
 .time h3 {
@@ -12,6 +29,7 @@
   padding-bottom: 9.94px;
 }
 
+
 .time span{
   display: inline-block;
   text-align: center;
@@ -20,7 +38,7 @@
   height: 4px;
 }
 
-.time div.container{
+.time div.cardContainer{
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
