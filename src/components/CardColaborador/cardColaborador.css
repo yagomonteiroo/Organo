@@ -21,22 +21,22 @@
   width: 120px;
   height: 120px;
   border-radius: 120px;
-  margin-top: -45px;
-  margin-bottom: 18px;
+  margin-top: -65px;
+  margin-bottom: 16px;
 }
 
 .card h4 {
   color: #6278f7;
   font-size: 18px;
   font-weight: 600;
-  padding-bottom: 9px;
+  padding-bottom: 6px;
 }
 
 .card p {
   color: #212121;
   text-align: center;
   font-size: 16px;
-  padding: 0 0.5rem;
+  padding: 0 1.2rem;
 }
 
 .card svg.btn-close{
@@ -46,4 +46,8 @@
   cursor: pointer;
   color: #fff;
   border-radius: 100%;
+}
+
+.card svg.btn-favoritar{
+  margin: .5rem
 }

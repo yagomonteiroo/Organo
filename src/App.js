@@ -10,36 +10,43 @@ function App() {
 
   const [times, setTimes] = useState([
     {
+      id: uuidv4(),
       nome: "Programação",
       corPrimaria:"#57C278",
       corSecundaria:"#D9F7E9",
     },
     {
+      id: uuidv4(),
       nome: "Front-End", 
       corPrimaria:"#82CFFA",
       corSecundaria:"#E8F8FF",
     },
     {
+      id: uuidv4(),
       nome: "Data Science",
       corPrimaria:"#A6D157",
       corSecundaria:"#F0F8E2",
     },
     {
+      id: uuidv4(),
       nome: "DevOps", 
       corPrimaria:"#E06B69",
       corSecundaria:"#FDE7E8",
     },
     {
+      id: uuidv4(),
       nome: "UI/UX",
       corPrimaria:"#DB6EBF",
       corSecundaria:"#FAE9F5",
     },
     {
+      id: uuidv4(),
       nome: "Mobile",
       corPrimaria:"#FFBA05",
       corSecundaria:"#FFF5D9",
     },
     {
+      id: uuidv4(),
       nome: "Inovação e Gestão",
       corPrimaria:"#FF8A29",
       corSecundaria:"#FFEEDF",
@@ -52,6 +59,7 @@ function App() {
     cargo: 'Estudante de Desenvolvimento Web',
     imagem: 'https://github.com/yagomonteiroo.png',
     time: 'Front-End',
+    favorito: false,
   }]
 
   const [colaboradores, setColaboradores]= useState(inicial);
@@ -60,27 +68,40 @@ function App() {
     setColaboradores( [...colaboradores, colaborador]);
   }
 
-  const removerColaborador = (nome) =>{
-    console.log(`clicou em ${nome}`)
-    setColaboradores( colaboradores.filter(colaborador => colaborador.nome !== nome));
+  const removerColaborador = (id) =>{
+    setColaboradores( colaboradores.filter(colaborador => colaborador.id !== id));
   }
 
-  const mudarCorDoTime = (cor, nome) =>{
+  const mudarCorDoTime = (cor, id) =>{
     setTimes(times.map(time => {
-      if(time.nome === nome){
+      if(time.id === id){
         time.corPrimaria = cor;
-        time.corSecundaria = cor+11;
+        time.corSecundaria = cor+33;
       }
       return time
     }))
   }
+
+  const adicionarTime = (novoTime) =>{
+    setTimes([...times, {...novoTime, id: uuidv4()} ]);
+  }
+
+  const resolverFavorito = (id) =>{
+    setColaboradores(colaboradores.map(colaborador => {
+      if(colaborador.id === id){
+        colaborador.favorito = !colaborador.favorito;
+      }
+      return colaborador
+    }))
+  }
+
   return (
     <div className="App">
       <Banner />
       <Formulario 
-        titulo= 'Preencha os dados para criar o card do colaborador.' 
         times= {times.map(time => time.nome)}
         aoColaboradorCadastrado={acicionarColaborador}
+        aoTimeCadastrado={adicionarTime}
       />
 
       <section className="times">
@@ -89,12 +110,14 @@ function App() {
         times.map (time => 
           <Time
             key={time.nome} 
+            id={time.id}
             nome = {time.nome} 
             corPrimaria = {time.corPrimaria} 
             corSecundaria  = {time.corSecundaria}
             colaboradores = {colaboradores.filter(colaborador => colaborador.time === time.nome)}
             aoDeletar = {removerColaborador}
-            aoMudarCor = {mudarCorDoTime}
+            aoMudarCor = {mudarCorDoTime} 
+            aoFavoritarColaborador = {resolverFavorito}
           />
         )
       }

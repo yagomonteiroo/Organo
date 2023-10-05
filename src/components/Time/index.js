@@ -1,25 +1,25 @@
 import CardColaborador from "../CardColaborador";
 import "./time.css";
 
-const Time = (props) => {
+const Time = ({aoDeletar, aoMudarCor, aoFavoritarColaborador, colaboradores,nome, id, corPrimaria, corSecundaria}) => {
 
   return (
-    props.colaboradores.length > 0 && //poderia ser um if ternario tb
-    <section id={ props.nome } className="time" style={{ backgroundColor: props.corSecundaria }}
+    colaboradores.length > 0 && //poderia ser um if ternario tb
+    <section id={ nome } className="time" style={{ backgroundColor: corSecundaria }}
     >
-      <input type="color" className="input-cor" value= { props.corPrimaria } onChange={e => props.aoMudarCor(e.target.value, props.nome)}/>
-      <h3>{ props.nome }</h3>
-      <span style={{ background: props.corPrimaria }}></span>
+      <input type="color" className="input-cor" value= { corPrimaria } onChange={e => aoMudarCor(e.target.value, id)}/>
+      <h3>{ nome }</h3>
+      <span style={{ background: corPrimaria }}></span>
 
       <div className="cardContainer">
-        {props.colaboradores.map(colaborador =>
+        {colaboradores.map((colaborador, indice) =>
           <CardColaborador
-            key={colaborador.nome}
-            nome={colaborador.nome}
-            cargo={colaborador.cargo}
-            imagem={colaborador.imagem}
-            background={props.corPrimaria}
-            aoDeletar={props.aoDeletar}
+            key={indice}
+            id={colaborador.id}
+            colaborador={colaborador}
+            background={corPrimaria}
+            aoDeletar={aoDeletar}
+            aoFavoritar={aoFavoritarColaborador}
           />
           )
         }

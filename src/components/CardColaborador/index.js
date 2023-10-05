@@ -1,7 +1,19 @@
+import { AiFillCloseCircle, AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 import "./cardColaborador.css";
-import { AiFillCloseCircle } from 'react-icons/ai';
 
-const Card = ({background,imagem, nome, cargo, aoDeletar}) => {
+const Card = ({colaborador, background, aoDeletar, aoFavoritar}) => {
+
+  function favoritar(){
+    aoFavoritar(colaborador.id)
+  }
+
+  const propsFavoritos={
+    className:'btn-favoritar',
+    color: background,
+    size: 21,
+    onClick: favoritar,
+  }
+
   return (
     <div className="card">
       <div className="fundo" style={{backgroundColor: background}}></div>
@@ -9,18 +21,26 @@ const Card = ({background,imagem, nome, cargo, aoDeletar}) => {
       <div
         className="img"
         style={{
-          background: `url('${imagem}') lightgray 50% / cover no-repeat`,
+          background: `url('${colaborador.imagem}') lightgray 50% / cover no-repeat`,
         }}
-        alt={"foto do colaborador " + nome}
+        alt={"foto do colaborador " + colaborador.nome}
       ></div>
 
-      <h4>{nome}</h4>
-      <p>{cargo}</p>
+      <h4>{colaborador.nome}</h4>
+      <p>{colaborador.cargo}</p>
       <AiFillCloseCircle 
         className="btn-close" 
         size={21}
         style={{backgroundColor: background}}
-        onClick={()=>aoDeletar(nome)}/>
+        onClick={()=>aoDeletar(colaborador.id)}
+      />
+
+      <div>
+          { colaborador.favorito 
+              ? <AiFillHeart {...propsFavoritos}/>
+              : <AiOutlineHeart {...propsFavoritos}/>
+          }
+      </div>
     </div>
   );
 };
