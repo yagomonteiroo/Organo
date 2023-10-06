@@ -3,9 +3,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  line-height: normal !important;
 }
 
-body .container{
+body .container-page{
   padding-left: calc((100% - 1440px + 10rem)/2);
   padding-right:  calc((100% - 1440px + 10rem)/2);
 }
@@ -36,38 +37,42 @@ h1, h2 {
 }
 
 @media screen and (max-width: 767px) {
-  section.formulario{
+  section.formulario {
     margin:50px 0
   }
 
-  section.formulario form{
+  section.formulario form, .modal-body form{
     padding: 21px;
   }
-  section.formulario h2{
+  
+  section.formulario h2, .modal-body h2{
     font-size: 22px ;
     line-height: 28px;
     margin-bottom: 20px;
   }
-  section.formulario label{
+  section.formulario label, .modal-body div label{
     font-size: 14px ;
   }
-  section.formulario input{
+  section.formulario input, .modal-body div input{
     font-size: 11px;
     height: 50px;
   }
-  section.formulario form{
+  section.formulario form, .modal-body div form{
     width: 303px;
   }
-  section.formulario select{
+  section.formulario .btn-add-time{
+    bottom: 151px;
+    right: 24px;
+  }
+  section.formulario select, .modal-body div select{
     font-size: 11px ;
     height: 50px ;
   }  
-  section.formulario button{
+  section.formulario button, .modal-body div button{
     font-size: 15px;
     width: 110px;
     height: 45px;
   }
-
   section.times h1{
     font-size:25px;
   }
@@ -82,31 +87,20 @@ h1, h2 {
   section.times span{
     width: 32px;
   }
-  section.times .card {
-    width: 242px;
-    height: 242px;  
+  section.times div.card-colaborador .fundo {
+    height: 85px;
   }
-  section.times div.card .fundo {
-    height: 91px;
-}
-section.times div.card .img {
+  section.times div.card-colaborador .img {
     width: 115px;
     height: 115px;
-    margin-top: -55px;
-    margin-bottom: 16px;
   }
-  section.times div.card h4 {
-    padding-bottom: 6px;
+  section.times div.card-colaborador h4 {
     font-size: 17px;
   }
 
   footer.footer{
     flex-wrap: wrap;
-    padding: 30px;
-    gap: 1.2rem;
-  }
-  footer.footer img{
-    width: 100px;
+    padding: 25px;
   }
 
   .redes img{
@@ -117,8 +111,8 @@ section.times div.card .img {
     width: 100%;
 
   }
-  .footer p, a, span{
-    font-size: 13px;
+  .footer div p, .footer div a, .footer div span{
+    font-size: 15px;
     text-align: center;
   }
 

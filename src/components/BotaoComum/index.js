@@ -1,5 +1,5 @@
-import './botao.css'
-const Botao = (props) =>{
+import './botaoComum.css'
+const BotaoComum = (props) =>{
   return(
     <div className='botao'>
       <button type="submit">{props.children}</button>
@@ -12,4 +12,4 @@ const Botao = (props) =>{
 //   e.preventDefault();
 // })
 
-export default Botao
+export default BotaoComum

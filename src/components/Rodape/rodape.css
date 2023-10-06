@@ -9,7 +9,8 @@
 }
 
 .footer img{
-  width: 166px;
+  width: 30vw;
+  max-width: 166px;
   height: auto;
 }
 .redes{
@@ -28,6 +29,7 @@
   color: #FFF;
   font-size: 20px;
   text-align: end;
+  margin: 0;
   
 }
 .footer span{

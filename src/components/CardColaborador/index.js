@@ -10,12 +10,12 @@ const Card = ({colaborador, background, aoDeletar, aoFavoritar}) => {
   const propsFavoritos={
     className:'btn-favoritar',
     color: background,
-    size: 21,
+    size: 21.5,
     onClick: favoritar,
   }
 
   return (
-    <div className="card">
+    <div className="card-colaborador">
       <div className="fundo" style={{backgroundColor: background}}></div>
 
       <div
@@ -29,9 +29,9 @@ const Card = ({colaborador, background, aoDeletar, aoFavoritar}) => {
       <h4>{colaborador.nome}</h4>
       <p>{colaborador.cargo}</p>
       <AiFillCloseCircle 
-        className="btn-close" 
+        className="btn-fechar" 
         size={21}
-        style={{backgroundColor: background}}
+        // style={{backgroundColor: background}}
         onClick={()=>aoDeletar(colaborador.id)}
       />
 

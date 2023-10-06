@@ -11,6 +11,7 @@
   border-radius: 20px;
   background: #F6F6F6;
   box-shadow: 7px 7px 15px 0px rgba(0, 0, 0, 0.08);
+  position: relative;
 }
 
 .formulario h2{
@@ -19,5 +20,10 @@
   margin-bottom: 44px;
   font-weight: normal;
   
+}
+
+div .modal-content{
+  background-color: #F6F6F6;
+  margin-top: 20vh;
 }
 

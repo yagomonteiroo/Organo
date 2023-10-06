@@ -1,7 +1,7 @@
 import './rodape.css';
 const Footer = ()=>{
   return(
-    <footer className="footer container">
+    <footer className="footer container-page">
       <div className="redes">
         <img src="/img/fb.png" alt="Instagram" />
         <img src="/img/tw.png" alt="Facebook" />
