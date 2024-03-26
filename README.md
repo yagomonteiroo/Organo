@@ -3,7 +3,7 @@
 Projeto de estudo desenvolvido durante o curso React: desenvolvendo com JavaScript da formação Oracle ONE em parceria com a Alura!. Durante a realização do projeto foram disponibilizados um protótipo no figma e um modelo kanban no trello para utilizar como ferramenta de gerenciamento do desenvolvimento do projeto.
 
 **Link para vizualizar o  projeto:**
-[https://organo-yagomonteiroo.vercel.app/](https://organo-yagomonteiroo.vercel.app/)          
+[https://organo-yagomonteiroo.vercel.app/](https://organo-yago-monteiros-projects.vercel.app)    
                     
 ## ⚙️Pré-requisitos
 
