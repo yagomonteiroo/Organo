@@ -5,6 +5,7 @@ const Card = ({colaborador, background, aoDeletar, aoFavoritar}) => {
 
   function favoritar(){
     aoFavoritar(colaborador.id)
+    console.log(colaborador.id)
   }
 
   const propsFavoritos={
